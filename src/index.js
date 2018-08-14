@@ -262,10 +262,10 @@ transition.install = (Vue, router, options = {}) => {
             if (vuegBac) {
                 vuegBac.innerHTML = ''
             }
-            if (op.nuxt && lastComponent) {
-                vuegBac = lastComponent.$el
-                vuegBac && vuegBac.parentElement.removeChild(vuegBac)
-            }
+            // if (op.nuxt && lastComponent) {
+              //  vuegBac = lastComponent.$el
+              //  vuegBac && vuegBac.parentElement.removeChild(vuegBac)
+            //}
 
             if (coordAnim.findIndex(item => item === anim) !== -1)
                 style.innerHTML = ''
@@ -304,7 +304,7 @@ transition.install = (Vue, router, options = {}) => {
             tabsDisable: false, //值为true时，tabs间的转场没有动画
             disable: false, //禁用转场动画
             shadow: true, //为false，转场时没有阴影层次效果
-            nuxt: false
+            nuxt: false // 只为了没有移动端切换时重影的bug
         }
     }
 
